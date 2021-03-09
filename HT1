@@ -1,0 +1,44 @@
+# Phyton-F
+#Ejercicio1 
+
+n = int(input("Introduce la altura del triángulo (entero positivo): "))
+
+for i in range(n):
+    for j in range (i+1):
+        print ("* ",end="")
+    print()
+
+
+
+#Ejercicio2
+
+n = int(input("Introduce un número (entero positivo): "))
+for i in range(n, -1, -1):
+    print(i, end=", ")
+print()
+
+
+
+#Ejercicio3
+
+def isPrime(num):
+    if num < 1:
+        return False
+    elif num == 2:
+        return True
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                return False
+        return True            
+def app():
+    num = int(input('Escribe un número: '))
+    result = isPrime(num)
+
+    if result is True:
+        print('El número es primo.')
+    else:
+        print('El número no es primo.')
+
+if __name__ == '__main__':
+    app()
